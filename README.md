@@ -6,8 +6,8 @@ In order to perform the tests, it is necessary to follow the this procedure, in 
 
 - execute the `./rdpmc.sh` script
 - go into the directory of the desired version
-- type `make -B NB_COEFF=`
-where `NB_COEFF` has to be either 8, 16, 24, 32, 40, 48, 56 or 64. If you dont specify `NB_COEFF`, the default is 8.
+- type `make -B NB_COEFF=XX`
+where `XX` has to be either 8, 16, 24, 32, 40, 48, 56 or 64. If you dont specify `NB_COEFF`, the default is 8.
 
 - then you can :
 	- test the computations by typing `./fulltest512`
