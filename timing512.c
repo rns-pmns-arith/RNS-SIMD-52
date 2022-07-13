@@ -988,6 +988,7 @@ fprintf(fr, "Base conversion; AVX-512; %d; %d; %ld; %lld; %ld; %ld\n", NB_COEFF,
 	tmp[1] = (int64_t *)malloc(NB_COEFF * sizeof(int64_t));
 	tmp[2] = (int64_t *)malloc(NB_COEFF * sizeof(int64_t));
 	tmp[3] = (int64_t *)malloc(NB_COEFF * sizeof(int64_t));
+	
 
 	mpz_urandomm(A, state, modul_p); //Randomly generates A < P
 	mpz_urandomm(B, state, modul_p); //Randomly generates A < P
@@ -1233,7 +1234,6 @@ fprintf(fr, "Base conversion; AVX-512; %d; %d; %ld; %lld; %ld; %ld\n", NB_COEFF,
 
 
 
-	//free(a);
 	//goto fin;
 //suite:
 
@@ -1661,6 +1661,15 @@ fprintf(fr, "Base conversion; AVX-512; %d; %d; %ld; %lld; %ld; %ld\n", NB_COEFF,
 
 
 fin:
+
+	free(tmp[0]);
+	free(tmp[1]);
+	free(tmp[2]);
+	free(tmp[3]);
+	
+	clear_rns(&rns_a);
+	clear_rns(&rns_b);
+	
 
 	fclose(fpt);
 

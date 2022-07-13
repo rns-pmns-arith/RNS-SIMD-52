@@ -943,6 +943,15 @@ int main(void)
 	mpz_clears(inv_p_modM, inv_M_modMp, modul_p, R_A, R_B, tmp_gcd, t, tmp_inv,NULL);
 fin:
 
+	free(tmp[0]);
+	free(tmp[1]);
+	free(tmp[2]);
+	free(tmp[3]);
+	
+	clear_rns(&rns_a);
+	clear_rns(&rns_b);
+	
+
 	mpz_clears(A,B,C,NULL);
 	
     return 0;

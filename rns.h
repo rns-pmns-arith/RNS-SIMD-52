@@ -16,6 +16,7 @@ void mult_mod_rns(int64_t *rop_rnsa, int64_t *rop_rnsb, int64_t *pa, int64_t *pa
 
 unsigned int rns_equal(struct rns_base_t base, int64_t *pa, int64_t *pb);
 void init_rns(struct rns_base_t *base);
+void clear_rns(struct rns_base_t *base);
 void from_int_to_rns(int64_t *rop, struct rns_base_t *base, mpz_t op);
 void from_rns_to_int_crt(mpz_t rop, struct rns_base_t *base, int64_t *op);
 void initialize_inverses_base_conversion(struct conv_base_t *conv_base);
